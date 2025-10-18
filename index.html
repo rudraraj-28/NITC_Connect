@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NITCConnect — Lite</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">NITCConnect</div>
+      <div id="userInfo" class="userInfo">Welcome</div>
+    </header>
+
+    <main class="main">
+      <div id="auth" class="card auth">
+        <h2 id="authTitle">Login</h2>
+        <form id="authForm">
+          <input id="name" class="input" placeholder="Full name (for register)" />
+          <input id="email" class="input" type="email" placeholder="your@nitc.ac.in" required />
+          <input id="password" class="input" type="password" placeholder="password" required />
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" id="authSubmit">Login</button>
+            <button type="button" class="btn alt" id="toggleAuth">Switch to Register</button>
+          </div>
+          <div id="authMsg" class="msg"></div>
+        </form>
+      </div>
+
+      <div id="dashboard" class="hidden">
+        <nav class="nav">
+          <button class="navbtn" data-view="marketplace">Marketplace</button>
+          <button class="navbtn" data-view="lostfound">Lost & Found</button>
+          <button class="navbtn" data-view="events">Events</button>
+          <button class="navbtn" data-view="tickets">Hostel Tickets</button>
+          <button class="navbtn" data-view="bookings">Hall Booking</button>
+          <button class="navbtn" data-view="clubs">Clubs</button>
+          <button class="navbtn" data-view="placements">Placements</button>
+          <button id="logout" class="btn alt">Logout</button>
+        </nav>
+
+        <section id="viewArea" class="viewArea card"></section>
+      </div>
+    </main>
+
+    <footer class="footer">Made with ❤️ for NITC students — demo version</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
